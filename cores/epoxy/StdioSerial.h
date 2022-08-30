@@ -36,6 +36,8 @@ class StdioSerial: public Stream {
 
     int peek() override;
 
+    void end();
+
   private:
     int bufch;
 };
@@ -43,5 +45,6 @@ class StdioSerial: public Stream {
 extern StdioSerial Serial;
 
 #define SERIAL_PORT_MONITOR Serial
+#define HardwareSerial StdioSerial
 
 #endif

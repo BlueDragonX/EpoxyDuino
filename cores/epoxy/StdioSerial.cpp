@@ -33,4 +33,6 @@ int StdioSerial::available() {
   return (int) (ch != -1);
 }
 
+void StdioSerial::end() {}
+
 StdioSerial Serial;
